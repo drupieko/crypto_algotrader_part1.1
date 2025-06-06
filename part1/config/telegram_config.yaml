@@ -1,0 +1,5 @@
+# telegram_config.yaml
+
+bot_token: "7352304667:AAHliIAKX6jKFIB0q_8t-nK9vzJYMkRm3zw"
+chat_id: "-1002677535005"
+parse_mode: "Markdown"

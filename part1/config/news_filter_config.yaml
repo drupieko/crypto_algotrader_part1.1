@@ -1,0 +1,32 @@
+# news_filter_config.yaml
+
+# Any article whose title or summary contains one or more of these keywords
+# (case-insensitive) will pass the filter. Adjust as needed for relevance.
+keywords:
+  - bitcoin
+  - ethereum
+  - solana
+  - blockchain
+  - altcoin
+  - defi
+  - airdrop
+  - partnership
+  - regulation
+  - hack
+  - exploit
+  - listing
+  - delisting
+  - launch
+  - upgrade
+  - security
+  - scam
+  - price
+  - pump
+  - dump
+  - market
+  - ETF
+  - halving
+
+# Minimum number of RSS feeds the article must appear in to be considered “important.”
+# This bypasses keyword filtering if an article is widely mentioned.
+min_weight: 2

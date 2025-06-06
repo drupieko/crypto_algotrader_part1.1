@@ -1,0 +1,18 @@
+[Unit]
+Description=Agent A - News Filter & Telegram Notification Service
+After=network.target
+
+[Service]
+Type=simple
+User=tito
+WorkingDirectory=/home/tito/crypto_algotrader_part1/part1
+Environment="PATH=/home/tito/crypto_algotrader_part1/part1/venv/bin"
+ExecStart=/home/tito/crypto_algotrader_part1/part1/venv/bin/python \
+  /home/tito/crypto_algotrader_part1/part1/scripts/news_filter_notify.py
+Restart=always
+RestartSec=5
+StandardOutput=file:/home/tito/crypto_algotrader_part1/logs/part1/news_filter_notify.log
+StandardError=file:/home/tito/crypto_algotrader_part1/logs/part1/news_filter_notify.log
+
+[Install]
+WantedBy=multi-user.target

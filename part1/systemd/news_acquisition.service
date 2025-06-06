@@ -1,0 +1,18 @@
+[Unit]
+Description=Agent A - RSS News Acquisition Service
+After=network.target
+
+[Service]
+Type=simple
+User=tito
+WorkingDirectory=/home/tito/crypto_algotrader_part1/part1
+Environment="PATH=/home/tito/crypto_algotrader_part1/part1/venv/bin"
+ExecStart=/home/tito/crypto_algotrader_part1/part1/venv/bin/python \
+  /home/tito/crypto_algotrader_part1/part1/scripts/news_acquisition.py
+Restart=always
+RestartSec=10
+StandardOutput=file:/home/tito/crypto_algotrader_part1/logs/part1/news_acquisition.log
+StandardError=file:/home/tito/crypto_algotrader_part1/logs/part1/news_acquisition.log
+
+[Install]
+WantedBy=multi-user.target

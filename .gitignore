@@ -1,0 +1,13 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Logs
+*.log
+logs/
+
+# SQLite DBs (optional if you don't want to track the local DB)
+*.db
