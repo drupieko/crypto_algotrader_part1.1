@@ -1,0 +1,54 @@
+mode: paper  # Options: live, paper, backtest
+
+exchange:
+  name: binance
+  api_key: "your_api_key"
+  api_secret: "your_api_secret"
+
+symbols:
+  exclude:
+    - BTC/USDT
+    - ETH/USDT
+    - BNB/USDT
+    - XRP/USDT
+    - SOL/USDT
+    - OKB/USDT
+
+  filters:
+    min_volume_usd: 10000000  # Filter for high liquidity
+    max_market_cap_rank: 100  # Optional if using CoinGecko integration
+
+timeframes:
+  HTF: "4h"
+  LTF: "15m"
+
+indicators:
+  rsi:
+    overbought: 70
+    oversold: 30
+  macd:
+    signal_confirm: true
+  adx:
+    threshold: 20
+  ema:
+    short: 20
+    long: 50
+  bollinger:
+    period: 20
+    deviation: 2
+  vwap:
+    enabled: true
+
+risk:
+  max_drawdown_percent: 30
+  daily_trade_limit: 20
+  dynamic_drawdown_enabled: true
+
+logging:
+  to_file: true
+  level: info
+
+alerts:
+  telegram_enabled: true
+  notify_on_trade: true
+  notify_on_error: true
