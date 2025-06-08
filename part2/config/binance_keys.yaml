@@ -1,0 +1,10 @@
+binance:
+  api_key: "25b9a372b5ac3bb8874a170b7e35f0c6cdada6b932f43119b3f1a8c8ccdeaea5"
+  api_secret: "976a7b599c9a5b9a9d038410105228340150eb9cced73a81d2c4e4e90187eb54"
+  symbols_excluded:
+    - BTCUSDT
+    - ETHUSDT
+    - SOLUSDT
+    - XRPUSDT
+    - BNBUSDT
+    - OKBUSDT
